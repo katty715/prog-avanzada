@@ -54,3 +54,43 @@ btnAsincrono.addEventListener('click', async function() {
     // Volvemos a habilitar el botón
     btnAsincrono.disabled = false;
 });
+
+// =====================================================================
+// EJEMPLO DE MANIPULACIÓN DEL DOM: createElement, appendChild, remove
+// =====================================================================
+
+const btnAgregar = document.getElementById('btn-agregar');
+const inputItem = document.getElementById('input-item');
+const listaDinamica = document.getElementById('lista-dinamica');
+
+btnAgregar.addEventListener('click', function() {
+    const texto = inputItem.value.trim(); // Obtenemos el texto ingresado
+    if (texto === "") return; // Si está vacío, no hacemos nada
+
+    // 1. createElement: Creamos nuevos "nodos" (elementos HTML) desde cero
+    const nuevoLi = document.createElement('li');
+    const spanTexto = document.createElement('span');
+    const btnEliminar = document.createElement('button');
+
+    // Configuramos los elementos
+    spanTexto.textContent = texto;
+    btnEliminar.textContent = 'Eliminar';
+    btnEliminar.classList.add('btn-eliminar');
+
+    // 2. remove: Le decimos al botón 'Eliminar' qué debe hacer al ser clickeado
+    btnEliminar.addEventListener('click', function() {
+        // remove() elimina por completo el elemento del DOM
+        nuevoLi.remove(); 
+    });
+
+    // 3. appendChild: Insertamos un nodo DENTRO de otro nodo "padre"
+    // Primero, metemos el texto y el botón dentro de la etiqueta <li>
+    nuevoLi.appendChild(spanTexto);
+    nuevoLi.appendChild(btnEliminar);
+
+    // Finalmente, metemos el <li> ya armado dentro de la lista principal <ul>
+    listaDinamica.appendChild(nuevoLi);
+
+    // Limpiamos la caja de texto
+    inputItem.value = '';
+});

@@ -108,3 +108,33 @@ main.dark-mode #resultado-ejemplos {
     border-color: #444;
     color: #00ff00; /* Letra verde estilo terminal hacker */
 }
+
+/* Clases utilitarias reemplazando los estilos inline */
+.separador {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#input-item {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.btn-fijo {
+    flex: 0;
+}
+
+#lista-dinamica {
+    list-style: none;
+    padding: 0;
+}

@@ -27,16 +27,29 @@
         </section>
 
         <!-- Nueva sección para probar las funciones -->
-        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;">
+        <hr class="separador">
         <section>
             <h2>Prueba de Funciones</h2>
-            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div class="flex-container">
                 <button id="btn-sincrono" class="btn-prueba">Ejecutar Síncrono</button>
                 <button id="btn-asincrono" class="btn-prueba">Ejecutar Asíncrono</button>
             </div>
             <div id="resultado-ejemplos">
                 El resultado aparecerá aquí...
             </div>
+        </section>
+
+        <!-- Nueva sección para manipulación del DOM -->
+        <hr class="separador">
+        <section>
+            <h2>Manipulación del DOM</h2>
+            <div class="flex-container">
+                <input type="text" id="input-item" placeholder="Nueva tarea...">
+                <button id="btn-agregar" class="btn-prueba btn-fijo">Agregar</button>
+            </div>
+            <ul id="lista-dinamica">
+                <!-- Aquí se agregarán dinámicamente los elementos <li> -->
+            </ul>
         </section>
     </main>
 
