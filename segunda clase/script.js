@@ -18,3 +18,39 @@ botonTema.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode'); // También afectamos al fondo de la pantalla
     
 });
+
+// =====================================================================
+// EJEMPLO DE FUNCIONES: Síncrona vs Asíncrona (Integradas al HTML)
+// =====================================================================
+
+const btnSincrono = document.getElementById('btn-sincrono');
+const btnAsincrono = document.getElementById('btn-asincrono');
+const divResultado = document.getElementById('resultado-ejemplos');
+
+// 1. Función Sincrónica
+btnSincrono.addEventListener('click', function() {
+    divResultado.innerHTML = "Iniciando saludo síncrono...<br>";
+    
+    // Ejecución inmediata
+    const saludo = "¡Hola! Este es un mensaje síncrono al instante.";
+    divResultado.innerHTML += saludo + "<br>";
+    divResultado.innerHTML += "Fin del saludo síncrono.";
+});
+
+// 2. Función Asincrónica
+btnAsincrono.addEventListener('click', async function() {
+    divResultado.innerHTML = "Iniciando petición asíncrona...<br>";
+    divResultado.innerHTML += "Esperando 2 segundos...<br>";
+    
+    // Deshabilitamos el botón para evitar múltiples clics mientras carga
+    btnAsincrono.disabled = true;
+    
+    // Simulamos una demora de 2 segundos
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    divResultado.innerHTML += "<strong>¡Datos recibidos después de 2 segundos!</strong><br>";
+    divResultado.innerHTML += "Fin de la petición asíncrona.";
+    
+    // Volvemos a habilitar el botón
+    btnAsincrono.disabled = false;
+});

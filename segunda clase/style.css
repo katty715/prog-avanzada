@@ -77,3 +77,34 @@ main.dark-mode #btn-tema {
     background-color: #f0f0f0;
     color: #333;
 }
+
+/* Estilos para la sección de ejemplos */
+.btn-prueba {
+    padding: 8px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Para que ocupen el mismo ancho */
+}
+
+.btn-prueba:hover {
+    background-color: #004494;
+}
+
+#resultado-ejemplos {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 50px;
+    font-family: monospace; /* Estilo tipo consola */
+    color: #333;
+}
+
+main.dark-mode #resultado-ejemplos {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #00ff00; /* Letra verde estilo terminal hacker */
+}
