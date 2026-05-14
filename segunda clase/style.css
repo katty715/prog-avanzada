@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Fondo oscuro */
+    color: #333; /* Texto oscuro para contrastar con la tarjeta clara */
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Para centrar verticalmente en toda la pantalla */
+}
+
+main {
+    background-color: #ffffff; /* Fondo claro para la tarjeta */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Padding interno */
+    margin: 20px; /* Margin (aunque está centrada por flexbox, da un margen en pantallas pequeñas) */
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Un toque visual extra */
+}
