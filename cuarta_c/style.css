@@ -1,0 +1,123 @@
+body {
+    background-color: white;
+    color: black;
+
+}
+h1 {
+    color: red;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+.project-description {
+    font-style: italic;
+    color: #02d842;
+}
+#descripcion-chistosa {
+    font-weight: bold;
+    color: #d80202;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor-flex {
+    border-radius: 15px;
+    border-color: #d80202; /*color del border del div*/
+    border-width: 1px; /** ancho del border del div*/
+    border-style: solid;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.contenedor-grid{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto ;
+    gap: 15px;
+}
+.item {
+    color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.titulo {
+    color:#02d842
+}
+.contenedor-movimiento {
+    display: flex;
+    gap: 10px;
+}
+.contenedor-animacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caja {
+    width: 120px;
+    height: 120px;
+    background-color: #3498db;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.trans-translate:hover {
+    transform: translate3d(5px, -5px, 15px);
+    background-color: #2ecc71;
+}
+.trans-scale:hover {
+    transform: scale(1.1);
+    background-color: #d80202;
+}
+.trans-rotate:hover {
+    transform: rotate(90deg);
+    /* transition-duration: 0ms; Hace que la rotación sea instantánea osea que controla el tiempo */
+    background-color: #02d842;
+}
+.trans-skew:hover {
+    transform: skew(15deg, 15deg);
+    background-color: #e83e8c;
+}
+.trans-combo:hover {
+    transform: translate(10px, -10px) scale(1.2) rotate(45deg);
+    background-color: #f39c12;
+}
+.barra {
+    width: 150px;
+    padding: 5px;
+    background-color: #3498db;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    
+    /* Indicamos que la transición durará 2 segundos para notar el efecto */
+    transition-property: width, background-color;
+    transition-duration: 2s; 
+}
+.contenedor-animacion:hover .barra{
+    width: 750px;
+    background-color: #2ecc71;
+}
+.trans-linear {
+    transition-timing-function: linear;
+}
+.trans-ease {
+    transition-timing-function: ease;
+}
+.trans-ease-in{
+    transition-timing-function: ease-in;
+}
+.trans-ease-out{
+    transition-timing-function: ease-out;
+}
+.trans-ease-in-out{
+    transition-timing-function: ease-in-out;    
+}
